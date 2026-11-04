@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<deployment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:jboss:bean-deployer:2.0">
+
+  <!-- Excelacom jDiameter Mux MBean -->
+  <bean name="JDiameter.StackMuxMBean" class="com.excelacom.jdiameter.stack.DiameterStackMultiplexer">
+    <annotation>@org.jboss.aop.microcontainer.aspects.jmx.JMX(name="diameter.jdiameter:service=DiameterStackMultiplexer", exposedInterface=com.excelacom.jdiameter.stack.DiameterStackMultiplexerMBean.class, registerDirectly=true)</annotation>
+    <demand>TransactionManager</demand>
+  </bean>
+
+</deployment>
